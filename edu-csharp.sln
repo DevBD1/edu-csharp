@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-CopyConstructorsOverloading", "06-CopyConstructorsOverloading/06-CopyConstructorsOverloading.csproj", "{31FE98BA-AE61-4044-8EAF-D7BFCDCE4FB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09-OperatorOverloading", "09-OperatorOverloading/09-OperatorOverloading.csproj", "{D9A536AC-5217-4447-85C7-DA88D89E3FA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31FE98BA-AE61-4044-8EAF-D7BFCDCE4FB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31FE98BA-AE61-4044-8EAF-D7BFCDCE4FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31FE98BA-AE61-4044-8EAF-D7BFCDCE4FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31FE98BA-AE61-4044-8EAF-D7BFCDCE4FB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9A536AC-5217-4447-85C7-DA88D89E3FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9A536AC-5217-4447-85C7-DA88D89E3FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9A536AC-5217-4447-85C7-DA88D89E3FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9A536AC-5217-4447-85C7-DA88D89E3FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B47A82B-0A59-4858-867E-5254D2E70C2A}
+	EndGlobalSection
+EndGlobal
