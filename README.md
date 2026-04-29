@@ -1,6 +1,6 @@
 # C# Alıştırma Reposu
 
-Bu depo, C# alıştırmalarını konu bazlı ve bağımsız küçük console projeleri halinde tutmak için kullanılıyor. Her konu kendi klasöründe kendi `csproj` dosyasına sahip olur.
+Bu depo, C# alıştırmalarını konu bazlı ve task bazlı küçük console projeleri halinde tutmak için kullanılıyor. Her konu klasörünün altında birden fazla `task-*` klasörü olabilir ve her task kendi `csproj` dosyasına sahip olur.
 
 ## 📚 Müfredat
 
@@ -19,7 +19,7 @@ Bu depo, C# alıştırmalarını konu bazlı ve bağımsız küçük console pro
 
 ## Çalıştırma
 
-Her konu için:
+Her task için:
 
 ```bash
 dotnet run --project 09-OperatorOverloading
@@ -28,7 +28,7 @@ dotnet run --project 09-OperatorOverloading
 veya
 
 ```bash
-dotnet run --project 06-CopyConstructorsOverloading
+dotnet run --project 06-CopyConstructorsOverloading/task-01
 ```
 
 ## 🎯 Çalışma Yöntemi

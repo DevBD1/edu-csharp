@@ -5,41 +5,50 @@ using System;
 public class SekilAlan
 {
     private double[] veri;
-    private String tip = string.Empty;
+    private string tip = string.Empty;
     private double alan;
     private double hacim;
     private double cevre;
     private double yuzeyAlani;
+
     public SekilAlan(params double[] degerler)
     {
-        veri = degerler.Length > 0 ? degerler : new double[] {0};
-        if (degerler.Length == 0) {
+        veri = degerler.Length > 0 ? degerler : new double[] { 0 };
+        if (degerler.Length == 0)
+        {
             tip = "bos";
-        } else if (degerler.Length == 1)
+        }
+        else if (degerler.Length == 1)
         {
             tip = "daire";
-        } else if (degerler.Length == 2)
+        }
+        else if (degerler.Length == 2)
         {
             tip = "dortgen";
-        } else if (degerler.Length > 2)
+        }
+        else if (degerler.Length > 2)
         {
             tip = "tanimsiz";
         }
     }
+
     public void alanHesapla()
     {
         if (tip == "bos" || tip == "tanimsiz")
         {
             alan = 0;
-        } else if (tip == "daire")
+        }
+        else if (tip == "daire")
         {
             double r = veri[0];
             alan = 2 * (Math.PI * (r * r));
-        } else if (tip == "dortgen")
+        }
+        else if (tip == "dortgen")
         {
-            alan = 2 * (veri[0]+veri[1]);
+            alan = 2 * (veri[0] + veri[1]);
         }
     }
+
     public void hacimHesapla()
     {
         if (tip == "bos" || tip == "tanimsiz")
@@ -55,6 +64,7 @@ public class SekilAlan
             hacim = Math.PI * veri[0] * veri[0] * veri[1];
         }
     }
+
     public void cevreHesapla()
     {
         if (tip == "bos" || tip == "tanimsiz")
@@ -78,6 +88,7 @@ public class SekilAlan
             cevre = 2 * Math.PI * veri[0];
         }
     }
+
     public void yuzeyAlaniHesapla()
     {
         if (tip == "bos" || tip == "tanimsiz")
@@ -93,6 +104,7 @@ public class SekilAlan
             yuzeyAlani = 2 * Math.PI * veri[0] * (veri[0] + veri[1]);
         }
     }
+
     public void yazdir()
     {
         Console.WriteLine("Tip: " + tip);
@@ -102,6 +114,7 @@ public class SekilAlan
         Console.WriteLine("Cevre: " + cevre);
         Console.WriteLine("Yuzey Alani: " + yuzeyAlani);
     }
+
     public static void Main()
     {
         SekilAlan s1 = new SekilAlan(2.5);
