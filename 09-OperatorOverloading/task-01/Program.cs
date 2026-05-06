@@ -108,14 +108,14 @@ public class Program
         Vektor v2 = new Vektor();
         Vektor v3 = new Vektor();
 
-        // Çarpma işlemini test etme
+        // Carpma islemini test etme
         v3 = v1 * v2;
 
         v1.yazdir();
         v2.yazdir();
         v3.yazdir();
 
-        // Toplama ve karşılaştırmayı test etme
+        // Toplama ve karsilastirmayi test etme
         Vektor v4 = v1 + v2;
         v4.yazdir();
         Console.WriteLine("v1 == v2: " + (v1 == v2));

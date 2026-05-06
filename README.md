@@ -22,7 +22,7 @@ Bu depo, C# alıştırmalarını konu bazlı ve task bazlı küçük console pro
 Her task için:
 
 ```bash
-dotnet run --project 09-OperatorOverloading
+dotnet run --project 09-OperatorOverloading/task-01
 ```
 
 veya
