@@ -1,36 +1,65 @@
 using System;
 
-public class Personel
+public class Bina
 {
-    public string Ad { get; set; }
-    public double Maas { get; set; }
+    private static int binaSayaci = 0;
 
-    public Personel(string ad, double maas)
+    public string turu { get; set; }
+    public int daire_sayisi { get; set; }
+    public double daire_boyutu { get; set; }
+    public double m2fiyat { get; set; }
+    public double toplamfiyat { get; set; }
+    public string aciklama { get; private set; }
+
+    public Bina(string turu, int daire_sayisi, double daire_boyutu, double m2fiyat)
     {
-        Ad = ad;
-        Maas = maas;
+        binaSayaci++;
+        aciklama = $"{binaSayaci}. bina";
+
+        this.turu = turu;
+        this.daire_sayisi = daire_sayisi;
+        this.daire_boyutu = daire_boyutu;
+        this.m2fiyat = m2fiyat;
+
+        Console.WriteLine("ben bina kurucusuyum");
     }
 
-    protected void Yazdir()
+    public void hesap()
     {
-        Console.WriteLine($"Personel Adi: {Ad}");
-        Console.WriteLine($"Personel Maasi: {Maas}");
+        toplamfiyat = daire_sayisi * daire_boyutu * m2fiyat;
+    }
+
+    public virtual void yaz()
+    {
+        Console.WriteLine($"Açıklama: {aciklama}");
+        Console.WriteLine($"Türü: {turu}");
+        Console.WriteLine($"Daire Sayısı: {daire_sayisi}");
+        Console.WriteLine($"Daire Boyutu: {daire_boyutu} m2");
+        Console.WriteLine($"Metrekare Fiyatı: {m2fiyat}");
+        Console.WriteLine($"Toplam Fiyat: {toplamfiyat}");
     }
 }
 
-public class Yazilimci : Personel
+public class betonBina : Bina
 {
-    public string ProgramlamaDili { get; set; }
+    public string binaTuru { get; set; }
 
-    public Yazilimci(string ad, double maas, string programlamaDili) : base(ad, maas)
+    public betonBina(string turu, int daire_sayisi, double daire_boyutu, double m2fiyat, string binaTuru)
+        : base(turu, daire_sayisi, daire_boyutu, m2fiyat)
     {
-        ProgramlamaDili = programlamaDili;
+        this.binaTuru = binaTuru;
+        Console.WriteLine("beton binayım");
     }
 
-    public new void Yazdir()
+    public override void yaz()
     {
-        base.Yazdir();
-        Console.WriteLine($"Programlama Dili: {ProgramlamaDili}");
+        Console.WriteLine($"Açıklama: {aciklama}");
+        Console.WriteLine($"Türü: {turu}");
+        Console.WriteLine($"Bina Türü: {binaTuru}");
+        Console.WriteLine($"Daire Sayısı: {daire_sayisi}");
+        Console.WriteLine($"Daire Boyutu: {daire_boyutu} m2");
+        Console.WriteLine($"Metrekare Fiyatı: {m2fiyat}");
+        Console.WriteLine($"Toplam Fiyat: {toplamfiyat}");
     }
 }
 
@@ -38,7 +67,14 @@ public class Program
 {
     public static void Main()
     {
-        Yazilimci yazilimci = new Yazilimci("Mehmet Burak Dorman", 110000, "C#");
-        yazilimci.Yazdir();
+        betonBina bina1 = new betonBina("Konut", 10, 123, 33000, "Betonarme");
+        bina1.hesap();
+        bina1.yaz();
+
+        Console.WriteLine();
+
+        betonBina bina2 = new betonBina("İşyeri", 6, 82, 38000, "Prefabrik");
+        bina2.hesap();
+        bina2.yaz();
     }
 }
